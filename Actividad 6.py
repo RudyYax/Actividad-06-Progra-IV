@@ -1,30 +1,27 @@
-productos = {}
+Productos = {}
 print("Actividad 06")
 print("----INVENTARIO DE UNA TIENDA----")
-productos = int(input(f" \n Ingrese la cantidad de productos que desea ingresar: "))
-for i in range(productos):
-    print(f"\n Ingrese el producto {i+1}: ")
-    print(f"\n Ingrese los siguientes datos")
-    codigo = input(f" \n Ingrese el codigo del producto: ")
-    if codigo == codigo:
-        print(f"\n Codigo ya ingresado")
-        nombre = input(f" \n Ingrese el nombre del producto: ")
-        precio = input(f" \n Ingrese el precio del producto: ")
-        if precio > 0:
-            print(f"\n precio ingresado correctamente")
-        else:
-            print(f"\n El precio no puede ser menor a 0")
-        cantidad = int(input(f" \n Ingrese la cantidad del producto: "))
-        if cantidad > 0:
-            print(f"\n cantidad ingresado correctamente")
-        else:
-            print("La cantidad ingresad al inventario tiene que ser positiva")
-        productos[codigo] = {
-        "nombre": nombre,
-        "precio": precio,
-        "cantidad": cantidad
-        }
+CantProductos = int(input(f" \ nIngrese la cantidad de productos que desea ingresar: "))
+for i in range(CantProductos):
+    print(f"Ingrese el producto {i+1}: ")
+    codigo = input(f" Ingrese el codigo del producto: ")
+    if codigo in Productos:
+        print(f"Codigo ya ingresado")
     else:
-        print("codigo ya ingresado")
+        nombre = input(f" Ingrese el nombre del producto: ")
+        precio = input(f" Ingrese el precio del producto: ")
+        if precio < 0:
+            print(f" El precio no puede ser menor a 0")
+        else:
+            cantidad = int(input(f" Ingrese la cantidad del producto: "))
+            if cantidad < 0:
+                print("La cantidad ingresad al inventario tiene que ser positiva")
+            else:
+                Productos[codigo] = {
+                "nombre": nombre,
+                "precio": precio,
+                "cantidad": cantidad
+                }
+                print("producto registrado")
 
 
