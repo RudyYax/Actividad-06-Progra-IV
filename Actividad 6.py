@@ -47,7 +47,7 @@ while opcion != "6":
             print(f"Talla : {inventario['Talla']}")
             print(f"Precio : {inventario['Precio']}")
             print(f"Cantidad : {inventario['Cantidad']}")
-    elif opcion == '3':
+    elif opcion == "3":
         print("Ingrese el codigo del producto que desea buscar: ")
         buscar = input(f" Ingrese el codigo del producto: ")
         if buscar in Productos:
@@ -58,14 +58,14 @@ while opcion != "6":
             print(f"La cantidad existente es: {Productos[buscar]['Cantidad']}")
         else:
             print("No se encontro el producto o no existe")
-    elif opcion == '4':
+    elif opcion == "4":
         Valor = 0
         for producto in Productos.values():
             Valor += producto['Precio'] * producto['Cantidad']
-            print(f"1 El valor total del inventario es: Q{Valor:.2f}")
-    elif opcion == '5':
+            print(f"El valor total del inventario es: Q{Valor:.2f}")
+    elif opcion == "5":
         print("Categorías")
-    elif opcion == '6':
+    elif opcion == "6":
         print = ("Gracias poe utilizar nuestro programa bye")
     else:
         print("Opcion no valida")
