@@ -44,3 +44,8 @@ if buscar in Productos:
     print(f"La cantidad existente es: {Productos[buscar]['cantidad']}")
 else:
     print("No se encontro el producto o no existe")
+
+Valor = 0
+for producto in Productos.values():
+    Valor += producto['precio'] * producto['cantidad']
+print = (f"El valor total del inventario es  Q{Valor}")
