@@ -12,7 +12,7 @@ while opcion != "6":
     print("6.- Salir del programa")
     opcion = input(f" Ingrese la opcion que desea ingresar: ")
     if opcion == "1":
-        CantProductos = int(input(f" Ingrese la cantidad de productos que desea ingresar: "))
+        CantProductos = int(input(f" \n Ingrese la cantidad de productos que desea ingresar: "))
         for i in range(CantProductos):
             print(f"Ingrese el producto {i + 1}: ")
             codigo = input(f" Ingrese el codigo del producto: ")
@@ -58,10 +58,14 @@ while opcion != "6":
             print(f"La cantidad existente es: {Productos[buscar]['Cantidad']}")
         else:
             print("No se encontro el producto o no existe")
-    elif opcion == "4":
+    elif opcion == '4':
         Valor = 0
         for producto in Productos.values():
             Valor += producto['Precio'] * producto['Cantidad']
-
-        print = (f"El valor total del inventario es  Q{Valor:.2f}")
-    elif o
+            print(f"1 El valor total del inventario es: Q{Valor:.2f}")
+    elif opcion == '5':
+        print("Categorías")
+    elif opcion == '6':
+        print = ("Gracias poe utilizar nuestro programa bye")
+    else:
+        print("Opcion no valida")
