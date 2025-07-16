@@ -9,6 +9,8 @@ for i in range(CantProductos):
         print(f"Codigo ya ingresado")
     else:
         nombre = input(f" Ingrese el nombre del producto: ")
+        categoria = input(f" Ingrese el categoria del producto: ")
+        talla = input(f" Ingrese el talla del producto: ")
         precio = float(input(f" Ingrese el precio del producto: "))
         if precio <= 0:
             print(f" El precio no puede ser menor a 0")
@@ -18,9 +20,11 @@ for i in range(CantProductos):
                 print("La cantidad ingresad al inventario tiene que ser positiva")
             else:
                 Productos[codigo] = {
-                "nombre": nombre,
-                "precio": precio,
-                "cantidad": cantidad
+                "Nombre": nombre,
+                "Categoria": categoria,
+                "Talla": talla,
+                "Precio": precio,
+                "Cantidad": cantidad
                 }
                 print("producto registrado")
 
@@ -31,3 +35,12 @@ for codigo,inventario in Productos.items():
     print(f"Nombre : {inventario['nombre']}" )
     print(f"Precio : {inventario['precio']}" )
     print(f"Cantidad : {inventario['cantidad']}" )
+
+print("Ingrese el codigo del producto que desea buscar: ")
+buscar =input(f" Ingrese el codigo del producto: ")
+if buscar in Productos:
+    print(f"Nombre del producto: {Productos[buscar]['nombre']}")
+    print(f"El precio del producto: {Productos[buscar]['precio']}")
+    print(f"La cantidad existente es: {Productos[buscar]['cantidad']}")
+else:
+    print("No se encontro el producto o no existe")
