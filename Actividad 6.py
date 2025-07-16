@@ -27,25 +27,30 @@ for i in range(CantProductos):
                 "Cantidad": cantidad
                 }
                 print("producto registrado")
-
-
+print("Bienvenidos")
+opcion = input(f" Ingrese la opcion que desea ingresar: ")
 print("Inventario total de productos: ")
 for codigo,inventario in Productos.items():
     print(f"Codigo : {codigo}" )
-    print(f"Nombre : {inventario['nombre']}" )
-    print(f"Precio : {inventario['precio']}" )
-    print(f"Cantidad : {inventario['cantidad']}" )
+    print(f"Nombre : {inventario['Nombre']}" )
+    print(f"Categoria : {inventario['Categoria']}")
+    print(f"Talla : {inventario['Talla']}")
+    print(f"Precio : {inventario['Precio']}" )
+    print(f"Cantidad : {inventario['Cantidad']}" )
 
 print("Ingrese el codigo del producto que desea buscar: ")
 buscar =input(f" Ingrese el codigo del producto: ")
 if buscar in Productos:
-    print(f"Nombre del producto: {Productos[buscar]['nombre']}")
-    print(f"El precio del producto: {Productos[buscar]['precio']}")
-    print(f"La cantidad existente es: {Productos[buscar]['cantidad']}")
+    print(f"Nombre del producto: {Productos[buscar]['Nombre']}")
+    print(f"Categoria : {inventario['Categoria']}")
+    print(f"Talla : {inventario['Talla']}")
+    print(f"El precio del producto: {Productos[buscar]['Precio']}")
+    print(f"La cantidad existente es: {Productos[buscar]['Cantidad']}")
 else:
     print("No se encontro el producto o no existe")
 
 Valor = 0
 for producto in Productos.values():
-    Valor += producto['precio'] * producto['cantidad']
+    Valor += producto['Precio'] * producto['Cantidad']
+
 print = (f"El valor total del inventario es  Q{Valor}")
